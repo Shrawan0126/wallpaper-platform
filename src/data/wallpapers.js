@@ -1,0 +1,40 @@
+export const wallpapers = [
+  {
+    id: "wp-1",
+    title: "Neon Skyline",
+    description: "Cyberpunk night city in 4K",
+    imageUrl: "https://images.unsplash.com/photo-1461716837214-3b8dcb518bdb?q=80&w=1200&auto=format&fit=crop",
+    downloadUrl: "https://images.unsplash.com/photo-1461716837214-3b8dcb518bdb?q=80&w=2400&auto=format&fit=crop",
+    category: "Cyberpunk",
+    tags: ["neon","city","night"],
+    resolution: "3840x2160",
+    width: 3840,
+    height: 2160,
+    fileSize: "6.2 MB",
+    format: "JPG",
+    downloads: 1240,
+    likes: 540,
+    createdAt: "2026-08-01",
+    featured: true,
+    trending: true
+  },
+  {
+    id: "wp-2",
+    title: "Misty Mountains",
+    description: "Peaceful alpine sunrise",
+    imageUrl: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop",
+    downloadUrl: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2400&auto=format&fit=crop",
+    category: "Nature",
+    tags: ["mountain","sunrise","mist"],
+    resolution: "3840x2160",
+    width: 3840,
+    height: 2160,
+    fileSize: "5.8 MB",
+    format: "JPG",
+    downloads: 980,
+    likes: 430,
+    createdAt: "2026-07-20",
+    featured: true,
+    trending: false
+  }
+];
