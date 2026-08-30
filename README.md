@@ -1,16 +1,117 @@
-# React + Vite
+# VelvetWall - Premium Wallpaper Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A complete responsive premium wallpaper web app built with **React + Vite**, **Tailwind CSS**, **Framer Motion**, and **React Router**.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Dark premium UI with glassmorphism, rounded cards, and smooth animations
+- Fully responsive layout for mobile, tablet, and desktop
+- Pages:
+  - Home
+  - Categories
+  - Category
+  - Search
+  - Wallpaper Details
+  - Favorites
+  - Login
+  - Register
+  - Profile
+  - Admin
+  - 404 Not Found
+- Reusable components:
+  - Navbar
+  - Footer
+  - HeroSection
+  - SearchBar
+  - WallpaperCard
+  - WallpaperGrid
+  - CategoryCard
+  - FilterPanel
+  - DownloadButton
+  - LoadingSkeleton
+- Realistic sample data with rich wallpaper metadata fields
+- Search by title, category, tags, description, and keywords
+- Live search suggestions
+- Filtering by category, resolution, orientation, color, date, and popularity
+- Sorting by latest, most downloaded, most liked, trending, and A-Z
+- Favorites persisted via localStorage
+- Wallpaper details with related/similar content
+- Download UX with resolution selector and success state
+- Admin mock UI structure for upload/edit/delete/statistics
+- Auth-ready login/register/profile frontend structure (no backend)
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite 8
+- Tailwind CSS 4
+- Framer Motion
+- React Router DOM
 
-## Expanding the Oxlint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```text
+src/
+  assets/
+  components/
+    CategoryCard.jsx
+    DownloadButton.jsx
+    FilterPanel.jsx
+    Footer.jsx
+    HeroSection.jsx
+    LoadingSkeleton.jsx
+    Navbar.jsx
+    SearchBar.jsx
+    WallpaperCard.jsx
+    WallpaperGrid.jsx
+  data/
+    categories.js
+    wallpapers.js
+  hooks/
+    useFavorites.js
+    useSearchSuggestions.js
+    useWallpaperFilters.js
+  pages/
+    AdminPage.jsx
+    CategoriesPage.jsx
+    CategoryPage.jsx
+    FavoritesPage.jsx
+    HomePage.jsx
+    LoginPage.jsx
+    NotFoundPage.jsx
+    ProfilePage.jsx
+    RegisterPage.jsx
+    SearchPage.jsx
+    WallpaperDetailsPage.jsx
+  utils/
+    wallpaperUtils.js
+  App.jsx
+  index.css
+  main.jsx
+```
+
+## Getting Started
+
+### 1) Install dependencies
+
+```bash
+npm install
+```
+
+### 2) Start development server
+
+```bash
+npm run dev
+```
+
+### 3) Build for production
+
+```bash
+npm run build
+```
+
+### 4) Preview production build
+
+```bash
+npm run preview
+```
