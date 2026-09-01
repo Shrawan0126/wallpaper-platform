@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-night-900: #05060a;
+  --color-night-800: #0d1019;
+  --color-night-700: #151a28;
+  --color-accent-500: #7c5cff;
+  --color-accent-400: #9a83ff;
+}
+
+@layer base {
+  body {
+    @apply bg-night-900 text-slate-100 antialiased;
+    background-image: radial-gradient(circle at 20% 10%, rgba(124, 92, 255, 0.2), transparent 34%),
+      radial-gradient(circle at 80% 0%, rgba(56, 189, 248, 0.2), transparent 30%);
+  }
+
+  * {
+    @apply border-slate-800;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply border border-white/10 bg-white/5 backdrop-blur-xl;
+  }
+}

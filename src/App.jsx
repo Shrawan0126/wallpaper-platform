@@ -1,38 +1,41 @@
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/layout/Navbar";
-import Footer from "./components/layout/Footer";
-import Home from "./pages/Home";
-import Categories from "./pages/Categories";
-import Category from "./pages/Category";
-import Search from "./pages/Search";
-import WallpaperDetails from "./pages/WallpaperDetails";
-import Favorites from "./pages/Favorites";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Profile from "./pages/Profile";
-import Admin from "./pages/Admin";
-import NotFound from "./pages/NotFound";
+import { Navigate, Route, Routes } from 'react-router-dom'
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
+import AdminPage from './pages/AdminPage'
+import CategoriesPage from './pages/CategoriesPage'
+import CategoryPage from './pages/CategoryPage'
+import FavoritesPage from './pages/FavoritesPage'
+import HomePage from './pages/HomePage'
+import LoginPage from './pages/LoginPage'
+import NotFoundPage from './pages/NotFoundPage'
+import ProfilePage from './pages/ProfilePage'
+import RegisterPage from './pages/RegisterPage'
+import SearchPage from './pages/SearchPage'
+import WallpaperDetailsPage from './pages/WallpaperDetailsPage'
 
-export default function App() {
+function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white flex flex-col">
+    <div className="min-h-screen">
       <Navbar />
-      <main className="flex-1">
+      <main className="mx-auto w-full max-w-7xl px-4 pb-12 pt-6 sm:px-6 lg:px-8">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/categories" element={<Categories />} />
-          <Route path="/category/:slug" element={<Category />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/wallpaper/:id" element={<WallpaperDetails />} />
-          <Route path="/favorites" element={<Favorites />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/categories" element={<CategoriesPage />} />
+          <Route path="/categories/:slug" element={<CategoryPage />} />
+          <Route path="/search" element={<SearchPage />} />
+          <Route path="/wallpapers/:id" element={<WallpaperDetailsPage />} />
+          <Route path="/favorites" element={<FavoritesPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/admin" element={<AdminPage />} />
+          <Route path="/home" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
       <Footer />
     </div>
-  );
+  )
 }
+
+export default App
